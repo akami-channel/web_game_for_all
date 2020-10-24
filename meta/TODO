@@ -1,0 +1,5 @@
+
+What's up with the setRectangle function? That is an ambiguous name! Me no likey
+
+Learn this syntax: (ES6 arrow function)
+	window.addEventListener("resize", x=>resize(canvas, gl));

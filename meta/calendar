@@ -1,0 +1,14 @@
+
+Sept 25:
+	Set up basic webgl canvas. I think I got it to render a texture. But it was using CORS. I spent most of my working time setting up my environment on windows. Supposedly activated windows and I did set up debian using WSL. Got git working, cloned my repo in with conway's game of life working on webgl.
+
+Sept 26:
+	I got the texture working in webgl. But it's using CORS to get the image data from some website, which I don't like. Tried to fix that a bit but didn't succeed this day. I did however succeed in removing this library that the code was using that I didn't want it to use.
+
+Sept 27:
+	Realized the obvious thing that I hadn't set up a game loop. And I set one up. It wasn't the best way of doing that so I found a better game loop (https://coderwall.com/p/iygcpa/gameloop-the-correct-way) and planned to do that tomorrow. I figured out the obvious thing that for the local server I can load an image with the url http://localhost:8000/assets/background_prototype_03.png for example.  
+
+Sept 28: 
+	Implemented the better game loop. But unfortunately it works sometimes and not other times. I think it's related to differing timing of when the image data gets loaded. I also set up a remote ubuntu instance, loaded the code up there, verified that that is accessible via http, and set up a simple 2 step workflow for scping my local directory to the remote one. I think maybe I fixed this problem by switching to using an html img element for the image data. Also made seperate src_local and src_remote. Based on these docs, it said I could use the html element for the image data (check the "pixels" area). This is likely the best bc we are sure the image gets loaded before my javascript runs in the window.onload function call.
+
+
